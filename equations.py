@@ -3,7 +3,7 @@
 def XtimesY(x,y):
     if x <= 0:
         return 0
-    result = exponent(y*Ln(x))
+    result = exponent(y*ln(x))
     return result
 
 
@@ -32,7 +32,7 @@ def exponent(x):
 
 
 
-def Ln(x):
+def ln(x):
     if x <= 0:
         return 0
         
