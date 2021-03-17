@@ -1,7 +1,7 @@
 # Section a: Pow function
 
 def XtimesY(x,y):
-    if x < 0 and int(y) != y or x == 0:
+    if x <= 0:
         return 0
     result = exponent(y*Ln(x))
     return result
@@ -33,10 +33,8 @@ def exponent(x):
 
 
 def Ln(x):
-    if x == 0:
+    if x <= 0:
         return 0
-    if x < 0:
-        x = x * (-1)
         
     Epsilon = 0.001
     y = x - 1.0
@@ -68,12 +66,6 @@ def calculate(x):
     result = exponent(x) * XtimesY(7,x) * XtimesY(x,-1) * sqrt(x,x)
     return round(result, 6)
 
-
-
-# Main
-
-num = float(input('Enter a number:'))
-print(calculate(num))
 
 
 
