@@ -2,7 +2,7 @@
 
 def XtimesY(x,y):
     if x <= 0:
-        return 0
+        return 0.0
     result = exponent(y*ln(x))
     return result
 
@@ -34,7 +34,7 @@ def exponent(x):
 
 def ln(x):
     if x <= 0:
-        return 0
+        return 0.0
         
     Epsilon = 0.001
     y = x - 1.0
@@ -66,6 +66,8 @@ def sqrt(x,y):
 # Section c: Calculate function
 
 def calculate(x):
+    if x <= 0:
+        return 0.0
     result = exponent(x) * XtimesY(7,x) * XtimesY(x,-1) * sqrt(x,x)
     result = float('%0.6f' % result)
     return result
